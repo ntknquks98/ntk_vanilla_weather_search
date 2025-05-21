@@ -7,6 +7,12 @@ function changeTemp(response) {
   tempValue.innerHTML = Math.round(`${response.data.temperature.current}`);
 }
 
+function changeIcon(response){
+  let icon = document.querySelector(".icon");
+  
+  icon.innerHTML = `<img class="day-icon" src="${response.data.condition.icon_url}" />`
+}
+
 function changeSky(response) {
 
   let skyCondition = document.querySelector(".sky");
@@ -49,6 +55,7 @@ function search(event) {
   let cityElement = document.querySelector("#change-city");
   cityElement.innerHTML = searchInputElement.value;
 
+
   let key = "6b90c613e500ac1f467bft96eea4oe2a";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${searchInputElement.value}&key=${key}`;
   axios.get(apiUrl).then(changeTemp);
@@ -56,6 +63,7 @@ function search(event) {
   axios.get(apiUrl).then(changeHumidity);
   axios.get(apiUrl).then(changePressure);
   axios.get(apiUrl).then(changeSky);
+  axios.get(apiUrl).then(changeIcon);
 
 }
 
