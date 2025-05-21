@@ -94,4 +94,4 @@ let currentDateELement = document.querySelector("#datetime");
 let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
-ert("welcome")
+alert("Welcome")
