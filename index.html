@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ntk weather app</title>
     <link rel="stylesheet" href="src\style.css"/>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -24,27 +25,30 @@
            
             </form>
         </header>
+
         <main>
             <h2 class="details">
                 Weather in 
                 <span id ="change-city"> Newcastle </span>
                 <div id="datetime"> 
                     <small>
-                        19 June 2025, 4:19:05 pm
                     </small>
                 </div>
                 <br>
 
-                <div id="weather-icon">
+                <div >
                 &#x26C5;
                 
                 </div>
-                <div id="temperature-value">18 
-                    <span class="temp-unit">°C</span> 
-                        <div>
-                        Partly cloudy
-                        </div>
-
+                <div>
+                    <span class="temperature">
+                    18
+                </span>
+                <span class="temp-unit">°C</span> 
+                </div>
+                
+                <div class="sky">
+                            Partly cloudy day
                 </div>
                 <br>
 
@@ -55,7 +59,7 @@
                     <div class="icons">
                         <img src="https://cdn-icons-png.flaticon.com/512/2045/2045893.png" width="32px">
                     </div>
-                    <span id="speed"> 
+                    <span class="speed"> 
                         2.56
                     </span> 
                     m/s
@@ -72,10 +76,10 @@
 
                 <div>
                     Pressure
-                    <div class="'icons">
+                    <div class="icons">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsbTNnhv8xa5fKkTACWq2xwuf1vvtqLyFKPg&s" width="30px">
                     </div>
-                    <span class=""pressure> 1014 </span>hPa
+                    <span class="pressure"> 1014 </span>hPa
                 </div>
             </div>
             </h2>
